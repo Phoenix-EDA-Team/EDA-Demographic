@@ -99,6 +99,9 @@ Rename: 파일 혹은 폴더명을 수정만 한 경우
 Test : 테스트코드
 - 예시) git commit -m "Test: "API 통신 테스트"
 
+
 Refactor: 리팩토링 
 
 Fix : 버그 수정
+
+Extra : 그외에 기타 커밋내용
