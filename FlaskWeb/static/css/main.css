@@ -5,22 +5,32 @@ body {
     background-color: #e9ecef;
 }
 
+#logo{
+    height: 64px;
+    width: 64px;
+}
+
 a{
     cursor: pointer;
     text-decoration: none;
     font-weight: bolder;
     color: #121212;
 }
-
+i{
+    font-size: 48px;
+}
 .sidebar {
      background-color: #f8f9fa; 
-     padding: 20px; 
+     padding: 20px;
+     margin-right: 20px; 
      height: 80vh; 
-}
-
+    }
+    
 .contents { 
+    background-color: #f8f9fa; 
     padding: 20px;
-     border-left: 1px solid #dee2e6; 
+    border-left: 1px solid #dee2e6; 
+    position: relative;
 }
 .menu-item { 
     cursor: pointer; 
