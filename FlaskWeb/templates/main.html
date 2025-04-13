@@ -1,0 +1,53 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>인구분석 대시보드</title>
+    <!-- 부트스트랩 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <!-- 내비게이션바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">인구분석 대시보드</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">홈</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 메인 -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 사이드바 -->
+            <div class="col-3 sidebar">
+                <div class="list-group">
+                    <a href="/scenario" class="menu-item {% if request.path == '/scenario' %}active{% endif %}">0. 시나리오설정</a>
+                    <a href="/analysis_goal" class="menu-item {% if request.path == '/analysis_goal' %}active{% endif %}">1. 분석목표 및 방법</a>
+                    <a href="/libraries" class="menu-item {% if request.path == '/libraries' %}active{% endif %}">2. 사용한 라이브러리</a>
+                    <a href="/hypothesis" class="menu-item {% if request.path == '/hypothesis' %}active{% endif %}">3. 가설 설정</a>
+                    <a href="/visualization" class="menu-item {% if request.path == '/visualization' %}active{% endif %}">4. 분석결과시각화</a>
+                    <a href="/conclusion" class="menu-item {% if request.path == '/conclusion' %}active{% endif %}">5. 분석결론</a>
+                    <a href="/references" class="menu-item {% if request.path == '/references' %}active{% endif %}">6. 참고문헌</a>
+                    <a href="/team" class="menu-item {% if request.path == '/team' %}active{% endif %}">7. 팀원역할</a>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 -->
+            <div class="col-7 contents">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- 부트스트랩 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

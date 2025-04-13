@@ -1,0 +1,46 @@
+body { 
+    padding: 20px; 
+    max-width: 80%; 
+    margin: 0 auto; 
+    background-color: #e9ecef;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #121212;
+}
+
+.sidebar {
+     background-color: #f8f9fa; 
+     padding: 20px; 
+     height: 80vh; 
+}
+
+.contents { 
+    padding: 20px;
+     border-left: 1px solid #dee2e6; 
+}
+.menu-item { 
+    cursor: pointer; 
+    padding: 10px; 
+    margin: 5px 0; 
+}
+.menu-item:hover {
+     background-color: #e9ecef; 
+}
+
+.contents ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+.contents li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+.img-fluid {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
