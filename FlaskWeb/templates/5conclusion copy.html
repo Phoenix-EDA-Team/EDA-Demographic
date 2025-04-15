@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국 인구 구조 분석 보고서</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #16a085;
+            margin-top: 25px;
+        }
+        
+        .hypothesis-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .hypothesis-title {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .result {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .supported {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .partial {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .rejected {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .evidence {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .graph-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .graph-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+        }
+        
+        .conclusion {
+            font-weight: bold;
+            background-color: #e3f2fd;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .correlation {
+            font-weight: bold;
+            color: #9b59b6;
+        }
+        
+        .source {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: right;
+            margin-top: 5px;
+        }
+        
+        .section-divider {
+            border-top: 2px dashed #bdc3c7;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>한국 인구 구조 분석 보고서</h1>
+    
+    <h2>저출산 문제 분석</h2>
+    
+    <div class="hypothesis-container">
+        <div class="hypothesis-title">가설 1: 결혼율 감소가 출생률 하락의 주요 원인일 것이다.</div>
+        <div class="result supported">지지됨</div>
+        
+        <div class="graph-container">
+            <img src="FlaskWeb/static/img/graph/가설1-결혼률과 출생률 상관관계분석.png" alt="결혼률과 출생률 상관관계 분석">
+            <div class="source">히트맵 분석 결과</div>
+        </div>
+        
+        <div class="evidence">
+            <p>히트맵 확인 결과 결혼률과 출생률은 <span class="correlation">49%</span>의 유의미한 상관관계가 있음</p>
+        </div>
+        
+        <div class="graph-container">
+            <img src="FlaskWeb/static/img/graph/가설1-시간에따른 결혼률과 출산률 추이.png" alt="시간에 따른 결혼률과 출산률 추이">
+            <div class="source">시간 경과에 따른 추이 분석</div>
+        </div>
+        
+        <div class="evidence">
+            <p>시간이 지남에 따라 결혼률이 감소하는데 출산율도 비슷하게 감소하는 추세 확인</p>
+        </div>
+        
+        <div class="conclusion">
+            결론: 결혼율이 감소하면 출산률도 함께 감소한다.
+        </div>
+    </div>
+    
+    <div class="hypothesis-container">
+        <div class="hypothesis-title">가설 2: 지역별 경제 수준이 높을수록 출산율이 올라갈 것이다.</div>
+        <div class="result partial">부분 지지됨</div>
+        
+        <div class="graph-container">
+            <img src="FlaskWeb/static/img/graph/가설2-지역별 경제 수준과 출산율의 관계.png" alt="지역별 경제 수준과 출산율의 관계">
+        </div>
+        
+        <div class="evidence">
+            <p>1인당 경제소득이 올라갈수록 출산율도 올라가는 경향 확인</p>
+        </div>
+        
+        <div class="conclusion">
+            결론: 경제 수준과 출산율 간에 양의 상관관계가 존재하나, 절대적인 출산율 증가로 이어지지는 않음
+        </div>
+    </div>
+    
+    <!-- 가설 3부터 가설 4까지 동일한 방식으로 구성 -->
+    
+    <div class="section-divider"></div>
+    
+    <h2>지방 공동화 문제 분석</h2>
+    
+    <div class="hypothesis-container">
+        <div class="hypothesis-title">가설 1: 지방의 낮은 혼인율이 인구 감소를 가속화한다.</div>
+        <div class="result partial">부분 지지됨</div>
+        
+        <div class="graph-container">
+            <img src="FlaskWeb/static/img/graph/가설1-년도별 수도권 vs 지방 출산율-결혼률 비교.png" alt="수도권 vs 지방 출산율-결혼률 비교">
+            <img src="FlaskWeb/static/img/graph/가설1-년도별 대도시 vs 소도시 출산율-결혼률 비교.png" alt="대도시 vs 소도시 출산율-결혼률 비교">
+        </div>
+        
+        <div class="evidence">
+            <p>수도권과 지방 모두 결혼율이 급감하고 있으며, 출생률도 비례해서 감소하고 있음</p>
+            <p>지방의 혼인률이 낮아서 인구감소하는 것은 사실이나, 수도권도 유사한 문제 발생</p>
+        </div>
+        
+        <div class="conclusion">
+            결론: 지방만의 문제가 아닌 전국적인 결혼률, 출산률 감소 현상으로 파악됨
+        </div>
+    </div>
+    
+    <!-- 나머지 지방 공동화 관련 가설들 동일한 방식으로 구성 -->
+    
+    <div class="section-divider"></div>
+    
+    <h2>종합 결론</h2>
+    <div class="hypothesis-container" style="background-color: #e8f4f8;">
+        <ol>
+            <li><strong>결혼율 감소</strong>가 출생률 하락의 가장 강력한 요인으로 확인됨</li>
+            <li>경제적 요인(소득, 실업률)은 부분적 영향만 미치는 것으로 분석</li>
+            <li>지역 간 차이(수도권 vs 지방)보다는 <strong>전국적 추세</strong>가 더 중요하게 작용</li>
+            <li>지방 인구 감소의 주원인은 <strong>인구 유출</strong>이며, 자연감소는 보조적 요인</li>
+            <li>20대 여성의 경제활동 기회 확대가 혼인율에 부정적 영향 가능성 있음</li>
+        </ol>
+    </div>
+</body>
+</html>
