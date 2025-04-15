@@ -1,29 +1,77 @@
 {% extends "main.html" %}
 
 {% block content %}
-<h3>분석 결론</h3>
-<hr>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5conclusion.css') }}">
+<div class="conclusion-container">
+  <h2 class="conclusion-title">결론</h2>
 
-<h4>저출산 문제</h4>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <section class="conclusion-section">
+    <h3>1. 수도권 과밀화</h3>
+    <ul>
+      <li>
+        <span class="icon">📈</span>
+        <strong>가설 3:</strong> 수도권으로의 인구 유입이 지방 인구 감소를 가속화한다. <span class="verified green">(검증됨)</span>
+        <div class="result"><span class="result-title">분석결과</span>: 수도권의 인구가 증가하며.<br>지방은 인구가 감소하고 있다.</div>
+        <div class="solution"><span class="solution-title">해결방안</span>: 지방 인구의 유출을 막는 정책수립</div>
+      </li>
+      <li>
+        <span class="icon">🏙️</span>
+        <strong>가설 2:</strong> 대도시의 자연증가율보다 소도시의 자연증가율이 낮을 것이다. <span class="verified green">(검증됨)</span>
+        <div class="result"><span class="result-title">분석결과</span>: 전국적으로 인구(자연증가율)가 감소하고 있으며.<br>대도시보다 소도시에서 더욱 큰 폭으로 인구가 감소하고 있다.</div>
+        <div class="solution"><span class="solution-title">해결방안</span>: 지방 소도시 및 부산·대구 지역의 인구유입 정책 실행</div>
+      </li>
+    </ul>
+  </section>
 
-<h4>지방 공동화 문제</h4>
+  <hr>
 
-<ol>
-    <li>분석3 : 수도권의 인구가 증가하며, 지방은 인구가 감소하고있다. </li>
-    해결방법 : 지방인구의 유출을 막을 방법이 필요하다.
-    <li>분석2 : 전국적으로 자연증가률이 감소하나, 대도시보다 소도시에서 더욱 큰 폭으로 자연증가율이 떨어진다.</li>
-    해결방법 : 지방 소도시에 인구유입 지원정책 실행
-    <li>분석1 : 인구 감소 문제는 지방만의 문제가 아니라 전국적으로 혼인률과 출산률이 떨어지는것이 원인이기 때문에 이를 해결해야한다. </li>
-    해결방법 : 결혼률 및 출산률을 올리기 위한 정책 실행이 필요
-</ol>
+  <section class="conclusion-section">
+    <h3>2. 출산율 감소</h3>
+    <ul>
+      <li>
+          <span class="icon">💍</span>
+          <strong>가설 1:</strong> 결혼율이 출산율을 결정한다. <span class="verified green">(검증됨)</span>
+          <div class="result"><span class="result-title">분석결과</span>: 결혼율 감소가 출산율에 직접적인 영향을 끼치고 있다.</div>
+          <div class="solution"><span class="solution-title">해결방안</span>: 결혼율 감소가 출산율 감소로 이어지는 구조적 연결 고리를 해소할 방안마련</div>
+      </li>        
+      <li>
+        <span class="icon">💰</span>
+        <strong>가설 2:</strong> 1인당 소득이 높을수록 출산율이 오른다. <span class="verified green">(검증됨)</span>
+        <div class="result"><span class="result-title">분석결과</span>: 1인당 소득이 높을수록 출산율이 높게 나타났다.</div>
+        <div class="solution"><span class="solution-title">해결방안</span>: 출산이 가능하도록 경제적 안정 수준의 지원이 필요하다.</div>
+      </li>
+      <li>
+        <span class="icon">💸</span>
+        <strong>가설 3:</strong> 수도권의 높은 생활비가 출산 기피를 유발한다. <span class="rejected red">(기각, 수정)</span>
+        <div class="result"><span class="result-title">분석결과</span>: 수도권과 비수도권 모두 물가상승에 따라 출산율이 감소하므로.<br>수도권만이 물가가 비싼 것은 아니었다.</div>
+        <div class="solution"><span class="solution-title">해결방안</span>: 전국적인 물가 조정 정책이 필요하다.</div>
+      </li>
+      <li>
+        <span class="icon">👩‍💼</span>
+        <strong>가설 4:</strong> 20~30대 실업률이 혼인율 감소에 영향을 준다. <span class="rejected red">(기각, 수정)</span>
+        <div class="result"><span class="result-title">분석결과</span>: 20대 여성 실업률과 혼인율 간 일부 음의 상관관계가 있었으나.<br>전체적으로 명확한 인과관계는 확인되지 않았다.</div>
+        <div class="solution"><span class="solution-title">해결방안</span>: 실업률은 직접적인 원인이 아니었으나.<br>고물가를 감당할 수 있는 양질의 일자리가 제공된다면 혼인율도 개선될 수 있다.</div>
+      </li>
+    </ul>
+  </section>
 
+  <hr>
 
-
-
-<!-- <img src="/static/img/graph/전체분포 - 이상치분포.png" class="img-fluid" > -->
+  <section class="conclusion-section">
+    <h3>3. 최종 결론</h3>
+    <div class="final-conclusion">
+      <span class="icon">🌏</span>
+      <strong>최종 결론:</strong><br>
+      <ul>
+        <li>수도권 인구 유입을 억제하고 지방 인구 유출을 막는 정책마련</li>
+        <li>지방 소도시와 대도시의 자연증가율 하락을 막기 위해 인구유입 정책을 강화</li>
+        <li>결혼율 감소가 출산율 저하로 이어지지 않도록 결혼·출산 지원책을 마련</li>
+        <li>출산율을 높이기 위해 경제적 지원과 소득 향상을 위한 정책 마련</li>
+        <li>전국적인 물가 안정 정책이 출산 기피 해소에 필요</li>
+        <li>청년들에게 양질의 일자리 제공</li>
+      </ul>
+    </div>
+    
+  </section>
+</div>
 {% endblock %}
