@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h3>분석 결과 시각화</h3>
+<hr>
+이번 분석은 지방 인구 감소 현상에서 출발했다.<br>
+순이동률 비교 그래프를 통해 보면,<br>
+2015년 이후 비수도권 지역의 순이동률은 급격한 하락세를 보이며,<br>
+지방 청년층 이탈과 지역 인구 유출이 심화되고 있음을 확인할 수 있다.<br>
+
+<!-- 내비게이션 바 -->
+<nav class="hypo-nav">
+  <button class="hypo-btn" data-hypo="1">가설1: 수도권 유입과 지방 감소</button>
+  <button class="hypo-btn" data-hypo="2">가설2: 대도시 vs 소도시 자연증가율</button>
+  <button class="hypo-btn" data-hypo="3">가설3: 지방 혼인율과 인구감소</button>
+  <button class="hypo-btn" data-hypo="4">가설4-1: 결혼율과 출산율</button>
+  <button class="hypo-btn" data-hypo="5">가설4-2: 소득과 자연증가율</button>
+  <button class="hypo-btn" data-hypo="6">가설4-3: 생활비와 출산기피</button>
+  <button class="hypo-btn" data-hypo="7">가설4-4: 실업률과 혼인율</button>
+</nav>
+<hr>
+
+<!-- 비동기 본문 영역 -->
+<div id="hypothesis-content">
+  <!-- 최초 로딩 시 1번 가설 표시 -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+function loadHypothesis(num) {
+  axios.get('/hypothesis/' + num)
+    .then(function(response) {
+      document.getElementById('hypothesis-content').innerHTML = response.data.html;
+    });
+}
+
+// 내비게이션 버튼 이벤트
+document.querySelectorAll('.hypo-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    loadHypothesis(this.getAttribute('data-hypo'));
+  });
+});
+
+// 최초 1번 가설 로딩
+window.onload = function() {
+  loadHypothesis(1);
+};
+</script>
+
+<style>
+.hypo-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.hypo-btn {
+  background: #f0f4fa;
+  border: 1px solid #b0c4de;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hypo-btn:hover {
+  background: #dbeafe;
+  color: #1e40af;
+}
+#hypothesis-content {
+  margin-top: 18px;
+}
+</style>
+{% endblock %}
