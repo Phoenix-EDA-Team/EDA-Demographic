@@ -12,11 +12,15 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/0scenario.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/2libraries.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/1analysis_goal.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/4visualization.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/5conclusion.css') }}">
 
     <!-- JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/4visualization.css') }}"></script>
     <!-- favicon -->
     <link rel="icon" href="{{ url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
 </head>
@@ -54,6 +58,7 @@
             <div class="col-7 contents">
                 {% block content %}
                 <h3>메인</h3>
+                <img src="{{ url_for('static', filename='/favicon.ico') }}" alt="불사조" width="800" height="800">
                 <hr>
                 {% endblock %}
             </div>

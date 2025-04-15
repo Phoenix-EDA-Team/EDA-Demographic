@@ -1,0 +1,135 @@
+/* 분석 목표 컨테이너 스타일 */
+.analysis-goal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 제목 스타일 */
+.analysis-goal-container h3 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #3498db;
+  text-align: center;
+}
+
+.analysis-goal-container h5 {
+  color: #2980b9;
+  font-size: 1.4rem;
+  margin: 2rem 0 1rem;
+  padding-left: 10px;
+  border-left: 4px solid #3498db;
+}
+
+/* 구분선 스타일 */
+.analysis-goal-container hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, 
+                            rgba(52,152,219,0), 
+                            rgba(52,152,219,0.75), 
+                            rgba(52,152,219,0));
+  margin: 2.5rem 0;
+}
+
+/* 메인 리스트 스타일 */
+.analysis-goal-container ul {
+  padding-left: 20px;
+  margin-bottom: 2rem;
+}
+
+.analysis-goal-container li {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  position: relative;
+  list-style-type: none;
+}
+
+.analysis-goal-container li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+}
+
+/* 강조 텍스트 */
+.analysis-goal-container strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* 서브 리스트 스타일 */
+.analysis-goal-container ul ul {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.analysis-goal-container ul ul li {
+  margin-bottom: 8px;
+  position: relative;
+  color: #555;
+}
+
+.analysis-goal-container ul ul li:before {
+  content: "◦";
+  color: #7f8c8d;
+  font-size: 1.1em;
+}
+
+/* 분석 방법 섹션 특별 스타일 */
+.analysis-goal-container h5:contains("분석 방법") + ul {
+  background-color: #f8fafc;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #e1e8ed;
+  margin-top: 1rem;
+}
+
+.analysis-goal-container h5:contains("분석 방법") + ul li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e1e8ed;
+}
+
+.analysis-goal-container h5:contains("분석 방법") + ul li:last-child {
+  border-bottom: none;
+}
+
+/* 분석 목표 섹션 특별 스타일 */
+.analysis-goal-container h5:contains("분석 목표") + ul {
+  background-color: #f5f9ff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #d6e4ff;
+  margin-top: 1rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .analysis-goal-container {
+      padding: 20px;
+  }
+  
+  .analysis-goal-container h3 {
+      font-size: 1.6rem;
+  }
+  
+  .analysis-goal-container h5 {
+      font-size: 1.2rem;
+  }
+  
+  .analysis-goal-container ul {
+      padding-left: 15px;
+  }
+}

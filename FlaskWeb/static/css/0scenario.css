@@ -1,0 +1,91 @@
+:root {
+  --background-color: #f7f9fa;
+  --card-bg: #fff;
+  /* --primary-color: #2a7de1; */
+  --secondary-color: #4e5968;
+  --accent-color: #e1ecfa;
+  --border-radius: 14px;
+  --box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  --heading-color: #1a1a1a;
+  --text-color: #333;
+  --divider-color: #e5e8eb;
+}
+
+
+h3 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--accent-color);
+  margin: 1.5em 0;
+}
+
+h5 {
+  color: var(--heading-color);
+  font-size: 1.15rem;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+ul {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.2em 1.5em;
+  margin: 0 0 2em 0;
+  /* list-style: none; */
+  border: 1px solid var(--accent-color);
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.8em;
+  color: var(--secondary-color);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  list-style: none;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+ul li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0.2em;
+  top: 0.9em;
+  width: 0.5em;
+  height: 0.5em;
+  background: var(--primary-color);
+  border-radius: 50%;
+  margin-right: 0.7em;
+}
+
+@media (max-width: 600px) {
+  h3 { font-size: 1.3rem; }
+  h5 { font-size: 1rem; }
+  ul { padding: 1em; }
+}
+
+/* 다크 모드 예시 (선택 적용) */
+body.dark-mode {
+  --background-color: #181c20;
+  --card-bg: #23272b;
+  --primary-color: #6ea8fe;
+  --secondary-color: #b0b8c1;
+  --accent-color: #2a3a4a;
+  --heading-color: #e9ecef;
+  --text-color: #e9ecef;
+  --divider-color: #2a3a4a;
+}
