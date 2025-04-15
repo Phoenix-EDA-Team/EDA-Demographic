@@ -24,10 +24,26 @@ def libraries():
 @app.route('/hypothesis')
 def hypothesis():
     return render_template('3hypothesis.html')
+#=========================
+
+# @app.route('/visualization')
+# def visualization():
+#     return render_template('4visualization.html')
 
 @app.route('/visualization')
 def visualization():
     return render_template('4visualization.html')
+
+@app.route('/get_overcrowding_content')
+def get_overcrowding_content():
+    return render_template('4visualization-1.html')
+
+@app.route('/get_lowbirth_content')
+def get_lowbirth_content():
+    return render_template('4visualization-2.html')
+
+
+#=========================
 
 @app.route('/conclusion')
 def conclusion():
