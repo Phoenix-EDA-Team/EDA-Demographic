@@ -62,7 +62,7 @@
   color: #e74c3c;
 }
 
-.result, .solution {
+.result, .solution, .ex {
   margin-top: 8px;
   margin-bottom: 2px;
   padding: 7px 12px;
@@ -82,7 +82,13 @@
   border-left: 4px solid #f7ca18;
 }
 
-.result-title, .solution-title {
+.ex {
+  background: #d4edda;
+  color: #1a5276;
+  border-left: 4px solid #228B22 ;
+}
+
+.result-title, .solution-title, .ex-title {
   font-weight: bold;
   margin-right: 6px;
 }
